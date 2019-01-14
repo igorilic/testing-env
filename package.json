@@ -8,13 +8,15 @@
     "flow": "flow",
     "prettier": "prettier  \"**/*.+(js|jsx|json|yml|yaml|css|less|scss|ts|tsx|md|mdx|graphql)\" ",
     "format": "yarn prettier --write",
-    "validate": "yarn lint && yarn prettier --list-different && yarn flow"
+    "validate": "yarn lint && yarn prettier --list-different && yarn flow",
+    "precommit": "yarn format && yarn validate"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^5.12.0",
     "eslint-config-prettier": "^3.4.0",
     "flow-bin": "^0.90.0",
+    "husky": "^1.3.1",
     "prettier": "^1.15.3"
   }
 }
