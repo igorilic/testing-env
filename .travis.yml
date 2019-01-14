@@ -8,4 +8,3 @@ notifications:
 node_js: '10'
 install: yarn install
 script: yarn validate
-branches: only master
