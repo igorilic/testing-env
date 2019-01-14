@@ -1,4 +1,3 @@
-/* eslint-disable */
 const {sum, sumAsync, substract, substractAsync} = require('../lib/math')
 describe('math functions', () => {
   test('sum', () => {
