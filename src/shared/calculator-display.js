@@ -16,7 +16,6 @@ class CalculatorDisplay extends React.Component {
 
     return (
       <div
-        {...props}
         css={{
           color: 'white',
           background: '#1c191c',
@@ -24,8 +23,9 @@ class CalculatorDisplay extends React.Component {
           fontSize: '6em',
           flex: '1',
         }}
+        {...props}
       >
-        <AutoScalingText>{formattedValue}</AutoScalingText>
+        <AutoScalingText> {formattedValue} </AutoScalingText>{' '}
       </div>
     )
   }

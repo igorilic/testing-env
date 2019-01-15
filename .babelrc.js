@@ -14,12 +14,20 @@ module.exports = {
     '@babel/plugin-proposal-class-properties',
     '@babel/plugin-proposal-object-rest-spread',
     [
-      'babel-plugin-emotion',
+      'babel-plugin-jsx-pragmatic',
+      {export: 'jsx', module: '@emotion/core', import: '___EmotionJSX'},
+    ],
+    [
+      '@babel/plugin-transform-react-jsx',
+      {pragma: '___EmotionJSX', pragmaFrag: 'React.Fragment'},
+    ],
+    [
+      'emotion',
       {
-        hoist: isProd,
         sourceMap: !isProd,
         autoLabel: !isProd,
         labelFormat: '[filename]--[local]',
+        cssPropOptimization: true,
       },
     ],
     'react-loadable/babel',
