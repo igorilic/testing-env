@@ -1,8 +1,7 @@
 node_modules
 coverage
+public
 dist
 build
 .build
-*~
-.vscode
 .history
