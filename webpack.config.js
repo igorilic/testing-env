@@ -7,7 +7,12 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    modules: ['node_modules', path.join(__dirname, 'src'), 'shared'],
+    modules: [
+      'node_modules',
+      path.join(__dirname, 'src'),
+      'shared',
+      path.join(__dirname, 'lib'),
+    ],
   },
   module: {
     rules: [
@@ -25,7 +30,7 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: ['/node_modules/', '/.history/'],
         use: {
           loader: 'babel-loader',
         },
