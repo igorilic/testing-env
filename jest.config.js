@@ -9,4 +9,8 @@ module.exports = {
     '\\.css$': require.resolve('./test/style-mock.js'),
   },
   snapshotSerializers: ['jest-emotion'],
+  // before Jest is loaded
+  setupFiles: [],
+  // after Jest is loaded
+  setupTestFrameworkScriptFile: require.resolve('./test/setup-test.js'),
 }

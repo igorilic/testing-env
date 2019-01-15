@@ -31,5 +31,6 @@ module.exports = {
       },
     ],
     'react-loadable/babel',
+    isTest ? 'babel-plugin-dynamic-import-node' : null,
   ].filter(Boolean),
 }
